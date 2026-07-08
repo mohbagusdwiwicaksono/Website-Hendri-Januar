@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      HENDRI JANUAR, S.H. & PARTNERS | Advokat, Pengacara & Lembaga Hukum
+    </title>
+    <!-- Hubungkan ke Google Fonts untuk tipe huruf premium seperti di contoh gambar -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 1. BAR ATAS (Jam Operasional & Kontak Cepat) -->
+ <!-- TOP BAR DENGAN TEKS BERJALAN (RUNNING TEXT) & TETAP MELAYANG -->
+<div class="top-bar">
+    <div class="container">
+        <!-- Tag marquee untuk membuat teks otomatis berjalan dari kanan ke kiri -->
+        <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
+            <span><i class="bi bi-clock"></i> Jam Praktik: <strong>Hari Senin - Minggu (Pukul 08:00 - 17:00 WIB)</strong></span>
+            <!-- <span style="margin-left: 50px;"><i class="bi bi-envelope"></i> Email: <strong>hendrijanuar01@gmail.com</strong></span>
+            <span style="margin-left: 50px;"><i class="bi bi-telephone"></i> WhatsApp: <strong>+62 813-9217-9033</strong></span> -->
+            <span style="margin-left: 50px;">Kantor Hukum Hendri Januar, S.H. & Partners — Siap Melayani dengan Profesional, Taktis, dan Terpercaya.</span>
+        </marquee>
+    </div>
+</div>
+
+    <!-- 2. NAVIGASI / HEADER UTAMA -->
+    <header class="main-header">
+      <div class="container header-content">
+        <div class="logo-area">
+          <span class="brand-title">HENDRI JANUAR, S.H. & PARTNERS</span>
+          <span class="brand-subtitle"
+            >Advokat / Pengacara & Lembaga Hukum</span
+          >
+        </div>
+        <nav class="navigation">
+          <a href="#beranda" class="nav-link">Beranda</a>
+          <a href="#tentang" class="nav-link">Tentang Kami</a>
+          <a href="#layanan" class="nav-link">Area Praktik</a>
+          <a href="#testimoni" class="nav-link">Testimoni</a>
+          <a href="#kontak" class="nav-link">Hubungi Kami</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 3. HERO SECTION (Bagian Atas dengan Teks Besar & Foto Latar Belakang) -->
+    <section id="beranda" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-text-block">
+          <h1>Pendampingan & Solusi Hukum Terpercaya</h1>
+          <p class="hero-subtext">
+            Komitmen tinggi dalam menegakkan keadilan, memberikan kepastian
+            hukum, serta melindungi hak dan kepentingan hukum Anda secara
+            profesional.
+          </p>
+          <a href="#kontak" class="btn-burgundy">Konsultasi Sekarang</a>
+        </div>
+
+        <!-- Kotak Tab Interaktif melayang di bagian bawah Hero (Replika Eksklusif image_55cda9.jpg) -->
+        <div class="hero-floating-tabs">
+          <div class="tab-box active">
+            <span class="tab-num">01</span>
+            <h3>Hukum Perdata</h3>
+            <p>
+              Penanganan sengketa kontrak, gugatan wanprestasi, pertanahan,
+              hingga hukum keluarga dan waris.
+            </p>
+          </div>
+          <div class="tab-box">
+            <span class="tab-num">02</span>
+            <h3>Hukum Pidana</h3>
+            <p>
+              Pendampingan hukum taktis mulai dari tingkat Kepolisian,
+              Kejaksaan, hingga persidangan di Pengadilan.
+            </p>
+          </div>
+          <div class="tab-box">
+            <span class="tab-num">03</span>
+            <h3>Hukum Bisnis</h3>
+            <p>
+              Penyusunan legalitas perusahaan, pembuatan draf kontrak komersial,
+              legal audit, dan mitigasi risiko bisnis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. TENTANG KAMI / PROFIL ADvOKAT -->
+    <section id="tentang" class="about-section">
+      <div class="container about-grid">
+        <div class="about-content">
+          <h2>
+            <span class="drop-cap">H</span>endri Januar, S.H.
+            <span class="sub-heading">Advokat & Penasihat Hukum Utama</span>
+          </h2>
+          <p>
+            Kantor Hukum
+            <strong>HENDRI JANUAR, S.H. & PARTNERS</strong> didirikan atas dasar
+            integritas, profesionalisme, dan dedikasi penuh untuk membela
+            kepentingan hukum klien. Kami memadukan pengetahuan hukum yang
+            mendalam dengan strategi yang taktis untuk menghasilkan solusi
+            terbaik, baik dalam jalur litigasi (persidangan) maupun non-litigasi
+            (negosiasi/mediasi).
+          </p>
+          <p>
+            Setiap perkara ditangani secara terukur, transparan, dan
+            mengutamakan kerahasiaan data serta hak-hak klien di hadapan hukum.
+          </p>
+        </div>
+        <div class="about-photo-wrapper">
+          <!-- TEMPAT FOTO PROFIL (Taruh file foto Bpk. Hendri di folder assets dengan nama profil.jpg) -->
+          <img
+            src="assets/profile.jpeg"
+            alt="Hendri Januar, S.H."
+            class="lawyer-photo"
+          />
+        </div>
+      </div>
+    </section>
+
+<!-- 5. AREA PRAKTIK / LAYANAN HUKUM (3 Blok Kartu Besar untuk 6 Layanan Terintegrasi) -->
+    <section id="layanan" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tagline">Kompetensi Kami</p>
+                <h2>Area Praktik & Layanan Hukum</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="services-visual-grid">
+                
+                <!-- BLOK 1: LITIGASI & PIDANA (Menggunakan assets/sidang.jpg) -->
+                <div class="service-card" style="background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/sidang.jpeg');">
+                    <div class="card-content">
+                        <div class="main-card-header">
+                            <i class="bi bi-bank"></i>
+                            <h4>Litigasi & Hukum Publik</h4>
+                        </div>
+                        <div class="sub-services-list">
+                            <div class="sub-item">
+                                <h5>• Hukum Pidana & Pembelaan</h5>
+                                <p>Pendampingan pelapor/terlapor dan perlindungan hak tersangka/terdakwa di tingkat Kepolisian hingga Kejaksaan.</p>
+                            </div>
+                            <div class="sub-item">
+                                <h5>• Praktik Peradilan & Sidang</h5>
+                                <p>Penanganan totalitas pembelaan hukum, penyusunan pledoi, dan advokasi di persidangan Pengadilan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BLOK 2: PERDATA & KELUARGA (Menggunakan assets/klien.jpg) -->
+                <div class="service-card" style="background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/sidang2.jpeg');">
+                    <div class="card-content">
+                        <div class="main-card-header">
+                            <i class="bi bi-people"></i>
+                            <h4>Sengketa Sipil & Keluarga</h4>
+                        </div>
+                        <div class="sub-services-list">
+                            <div class="sub-item">
+                                <h5>• Hukum Perdata & Kontrak</h5>
+                                <p>Penanganan gugatan perbuatan melawan hukum, sengketa wanprestasi, pertanahan, serta eksekusi jaminan.</p>
+                            </div>
+                            <div class="sub-item">
+                                <h5>• Hukum Keluarga & Waris</h5>
+                                <p>Pengurusan sengketa waris, pembagian harta bersama (gono-gini), perceraian, hibah, dan mediasi keluarga.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BLOK 3: KORPORASI & KONSULTASI (Menggunakan assets/bisnis.jpg) -->
+                <div class="service-card" style="background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/sidang3.jpeg');">
+                    <div class="card-content">
+                        <div class="main-card-header">
+                            <i class="bi bi-briefcase"></i>
+                            <h4>Bisnis & Konsultasi Lembaga</h4>
+                        </div>
+                        <div class="sub-services-list">
+                            <div class="sub-item">
+                                <h5>• Hukum Bisnis & Perusahaan</h5>
+                                <p>Pendampingan legalitas pendirian PT, sengketa hubungan industrial, dan kepatuhan hukum ketenagakerjaan.</p>
+                            </div>
+                            <div class="sub-item">
+                                <h5>• Legal Consultant & Advokasi</h5>
+                                <p>Penyusunan Legal Opinion resmi, pemeriksaan dokumen (Legal Due Diligence), dan penasihat hukum instansi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION TESTIMONI -->
+<section id="testimoni" class="testimonial-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tagline">Bukti Dedikasi</p>
+                <h2>Testimoni Klien Kami</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="testimonial-container">
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="bi bi-quote"></i></div>
+                    <p class="testimonial-text">"Sangat puas dengan penanganan kasus sengketa bisnis perusahaan kami. Tim Hendri Januar, S.H. & Partners bekerja dengan sangat taktis, transparan, dan memberikan kepastian hukum yang jelas sejak awal diskusi."</p>
+                    <div class="client-profile">
+                        <div class="client-info">
+                            <h4>Budi Santoso</h4>
+                            <span class="client-title">Direktur PT Maju Jaya</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="bi bi-quote"></i></div>
+                    <p class="testimonial-text">"Konsultasi hukum online-nya sangat praktis dan solutif. Penjelasan mengenai pembagian waris keluarga disampaikan dengan bahasa yang mudah dipahami dan penuh empati. Terima kasih banyak atas bantuannya."</p>
+                    <div class="client-profile">
+                        <div class="client-info">
+                            <h4>Siti Rahmawati</h4>
+                            <span class="client-title">Klien Hukum Keluarga</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="bi bi-quote"></i></div>
+                    <p class="testimonial-text">"Firma hukum yang sangat berintegritas. Proses peninjauan kontrak kerja sama digital bisnis saya diselesaikan dengan cepat dan sangat detail guna meminimalisir risiko hukum di masa depan."</p>
+                    <div class="client-profile">
+                        <div class="client-info">
+                            <h4>Rian Wijaya</h4>
+                            <span class="client-title">Founder Tech Startup</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>    
+
+<!-- 6. BAGIAN FORMULIR BOOKING SESI KONSULTASI (GAYA SPLIT VISUAL PREMIUM) -->
+<section id="kontak" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tagline">Reservasi Jadwal</p>
+                <h2>Sesi Konsultasi Hukum Online</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="pinterest-split-container">
+                
+<!-- KOLOM KIRI: FOTO HUKUM UTUH RESOLUSI TINGGI (ANTI PECAH) -->
+<div class="pinterest-image-side" style="background-image: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1200&auto=format&fit=crop');">
+    <div class="pinterest-floating-card">
+        <span class="card-tag">Hendri Januar, S.H. & Partners</span>
+        <h3>Kepastian Hukum, <br>Solusi Terbaik.</h3>
+        <p>Jadwalkan sesi diskusi privat bersama kami untuk bedah kasus secara mendalam, taktis, dan terpercaya.</p>
+    
+    <!-- SOSIAL MEDIA DI KOTAK PINTEREST (LANGSUNG REDIRECT) -->
+    <div class="pinterest-socials">
+        <a href="https://wa.me/6281392179033" target="_blank" title="WhatsApp Kami"><i class="bi bi-whatsapp"></i></a>
+        <!-- Ganti alamat_email@gmail.com dengan email Kakak Anda -->
+        <a href="hendrijanuar01@gmail.com" title="Email Kami"><i class="bi bi-envelope-fill"></i></a>
+        <!-- Ganti dengan link profile Facebook asli -->
+        <a href="https://facebook.com/hendrijanuarsh" target="_blank" title="Facebook Kami"><i class="bi bi-facebook"></i></a>
+        <!-- Ganti dengan link profile Instagram asli -->
+        <a href="https://instagram.com/hendrijanuarsh" target="_blank" title="Instagram Kami"><i class="bi bi-instagram"></i></a>
+        <!-- Ganti dengan link profile TikTok asli -->
+        <a href="https://tiktok.com/@hendrijanuarsh" target="_blank" title="TikTok Kami"><i class="bi bi-tiktok"></i></a>
+    </div>
+      </div>
+</div>
+
+                <div class="pinterest-form-side">
+                    <form id="whatsappForm" class="consultation-form">
+                        
+                        <div class="form-group">
+                            <label for="clientName">Nama Lengkap *</label>
+                            <input type="text" id="clientName" placeholder="Masukkan nama Anda" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sessionPackage">Paket Sesi Konsultasi *</label>
+                            <select id="sessionPackage" required>
+                                <option value="" disabled selected>-- Pilih Durasi Sesi --</option>
+                                <option value="Sesi Kilat (30 Menit) - Rp 150.000">Sesi Kilat (30 Menit) - Rp 150.000</option>
+                                <option value="Sesi Intensif (1 Jam) - Rp 300.000">Sesi Intensif (1 Jam) - Rp 300.000</option>
+                                <option value="Corporate Advisory (Bulanan)">Corporate Advisory (Bulanan)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookingDate">Tanggal *</label>
+                                <input type="date" id="bookingDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingTime">Jam Sesi *</label>
+                                <select id="bookingTime" required>
+                                    <option value="" disabled selected>-- Jam --</option>
+                                    <option value="09:00 WIB">09:00 WIB</option>
+                                    <option value="10:00 WIB">10:00 WIB</option>
+                                    <option value="13:00 WIB">13:00 WIB</option>
+                                    <option value="14:00 WIB">14:00 WIB</option>
+                                    <option value="15:00 WIB">15:00 WIB</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="caseDescription">Uraian Singkat Masalah *</label>
+                            <textarea id="caseDescription" rows="3" placeholder="Kronologi singkat kasus Anda..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit-wa">
+                            <i class="bi bi-whatsapp"></i> Kirim ke WhatsApp
+                        </button>
+                        
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const phoneNumber = "6281392179033"; // Ganti dengan nomor WhatsApp kakak Anda
+            
+            const name = document.getElementById('clientName').value;
+            const packageSelected = document.getElementById('sessionPackage').value;
+            const date = document.getElementById('bookingDate').value;
+            const time = document.getElementById('bookingTime').value;
+            const description = document.getElementById('caseDescription').value;
+
+            const message = `*FORMULIR RESERVASI KONSULTASI HUKUM*%0A` +
+                            `-------------------------------------------%0A%0A` +
+                            `*Nama Klien :* ${name}%0A` +
+                            `*Paket Sesi :* ${packageSelected}%0A` +
+                            `*Jadwal Hari :* ${date}%0A` +
+                            `*Jam Sesi :* ${time}%0A%0A` +
+                            `*Uraian Masalah :*%0A${description}%0A%0A` +
+                            `-------------------------------------------%0A` +
+                            `_Mohon info ketersediaan jadwal dan instruksi pembayaran._`;
+
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+
+<!-- 7. BAGIAN FOOTER UTAMA (ALAMAT GOOGLE MAPS INTERAKTIF) -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            
+            <!-- Kolom 1: Profil Singkat & Sosmed -->
+            <div class="footer-col profile-col">
+                <h3>HENDRI JANUAR, S.H. & PARTNERS</h3>
+                <p>Lembaga Hukum profesional yang berdedikasi tinggi dalam memberikan pelayanan hukum terbaik, taktis, dan terpercaya demi menegakkan keadilan dan kepastian hukum klien.</p>
+                <!-- SOSIAL MEDIA DI FOOTER (LANGSUNG REDIRECT) -->
+    <div class="footer-social-icons">
+        <a href="https://wa.me/6281392179033" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="hendrijanuar01@gmail.com" title="Email"><i class="bi bi-envelope-fill"></i></a>
+        <a href="https://facebook.com/hendrijanuarsh" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com/hendrijanuarsh" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://tiktok.com/@hendrijanuarsh" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+    </div>
+            </div>
+
+            <!-- Kolom 2: Tautan Cepat -->
+            <div class="footer-col links-col">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#tentang">Tentang Kami</a></li>
+                    <li><a href="#layanan">Area Praktik</a></li>
+                    <li><a href="#testimoni">Testimoni</a></li>
+                    <li><a href="#kontak">Hubungi Kami</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Alamat Kantor & Peta Google Maps Live -->
+            <div class="footer-col maps-col">
+                <h4>Alamat Kantor</h4>
+                <p class="office-address"><i class="bi bi-geo-alt-fill"></i> Dsn. Kudusan, RT.03/RW.01, Kudusan, Plosokandang, Kec. Kedungwaru, Kab. Tulungagung</p>
+                
+                <!-- Bingkai Google Maps Embed -->
+                <div class="google-maps-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.194064306135!2d111.92513757500812!3d-8.081681191946588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78e3007659b9d3%3A0x9d7b9938e1a6ab3a!2sKantor%20Hukum%20Hendri%20Januar%2C%20S.H.%20%26%20Partners!5e0!3m2!1sid!2sid!4v1783063678543!5m2!1sid!2sid" 
+                        width="100%" 
+                        height="150" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"></>
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Baris Hak Cipta -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hendri Januar, S.H. & Partners. All Rights Reserved.</p>
+        </div>
+    </footer>
+<script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
+</body>
+</body>
+  </body>
+</html>
