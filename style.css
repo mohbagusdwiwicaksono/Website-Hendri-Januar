@@ -1138,156 +1138,153 @@ body {
 }
 
 /* ==========================================================================
-   INTERVENSI TOTAL: RESPONSIF SELEKTOR SPESIFIK (ANTI-TERPOTONG & FLUID)
+   PERBAIKAN TOTAL LAYAR HP: TRUE FLEX/BLOCK LAYOUT (ANTI-TERPOTONG & NATURAL)
    ========================================================================== */
 @media (max-width: 768px) {
-  /* 1. JALUR DARURAT GLOBAL: Paksa semua pembungkus halaman untuk bisa di-scroll */
+  /* 1. RESET GLOBAL UNTUK HP */
   html,
   body,
   main,
   .main-wrapper,
-  .content-wrapper,
-  #app,
-  .container {
+  .content-wrapper {
     height: auto !important;
     min-height: 100vh !important;
-    max-height: none !important;
     overflow-y: visible !important;
     overflow-x: hidden !important;
   }
 
-  /* Hilangkan jarak kosong berlebih antar halaman agar terlihat padat */
+  /* Hilangkan kuncian display laptop, buat semua mengalir lurus ke bawah */
   section,
+  .hero-section,
+  .about-section,
   .services-section,
-  .testimonial-section {
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-    padding: 35px 15px !important;
-    display: block !important;
-  }
-
-  /* ----------------------------------------------------------------------
-       2. PENYEMBUHAN BERANDA (HERO SECTION) - ANTI-POTONG BACKGROUND
-       ---------------------------------------------------------------------- */
-  #beranda,
-  .hero-section {
-    height: auto !important;
-    min-height: 100vh !important; /* Biarkan memenuhi layar HP secara fleksibel */
-    max-height: none !important;
-    overflow: visible !important;
-    padding: 120px 20px 60px 20px !important; /* Beri ruang agar teks tidak menutupi navbar */
-    background-attachment: scroll !important; /* Nonaktifkan parallax di HP agar background pas */
-    background-size: cover !important;
-    background-position: center center !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-  }
-
-  /* ----------------------------------------------------------------------
-       3. PENYEMBUHAN TOTAL "TENTANG KAMI" (ABOUT) - TEKS & FOTO UTUH
-       ---------------------------------------------------------------------- */
-  #tentang,
-  .about-section {
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-    padding: 40px 15px !important;
-    display: block !important;
-  }
-
-  /* Paksa container dalam tentang kami menjadi 1 kolom bertumpuk */
-  .about-section .container,
-  .about-container,
-  .about-row {
-    display: flex !important;
-    flex-direction: column !important;
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
-    gap: 20px !important;
-    overflow: visible !important;
-  }
-
-  /* Sembuhkan Teks Penjelasan */
-  .about-text-side,
-  .about-text-content,
-  .about-content {
-    width: 100% !important;
-    height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-    display: block !important;
-  }
-
-  /* Sembuhkan Foto Pengacara agar Tidak Gepeng/Terpotong */
-  .about-image-side,
-  .about-img-wrapper,
-  .about-section img {
-    width: 100% !important;
-    max-width: 290px !important; /* Ukuran kotak foto ideal di HP */
-    height: 360px !important; /* Kunci tinggi foto agar proporsional */
-    min-height: 360px !important;
-    max-height: 360px !important;
-    margin: 0 auto !important; /* Posisikan di tengah layar HP */
-    object-fit: cover !important; /* Potong foto secara cerdas di wajah */
-    border-radius: 8px !important;
-    display: block !important;
-  }
-
-  /* ----------------------------------------------------------------------
-       4. PENYEMBUHAN FINAL FORM RESERVASI KONSULTASI (ANTI-TERPOTONG)
-       ---------------------------------------------------------------------- */
-  #kontak,
+  .testimonial-section,
+  #kontAK,
   .contact-section {
     height: auto !important;
     min-height: auto !important;
     max-height: none !important;
     overflow: visible !important;
-    padding: 40px 15px !important;
+    display: block !important;
+    padding: 40px 20px !important; /* Jarak aman antar halaman agar padat */
+    box-sizing: border-box !important;
   }
 
-  /* Hancurkan kuncian tinggi wadah split 2 kolom milik laptop */
-  .pinterest-split-container {
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
     display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* 2. PERBAIKAN MENU NAVIGASI (Biarkan berbaris rapi di tengah) */
+  .contact-section .section-header p,
+  header nav,
+  .nav-menu,
+  .navbar {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    height: auto !important;
+  }
+
+  /* 3. BERANDA (HERO SECTION) */
+  #beranda,
+  .hero-section {
+    padding-top: 100px !important; /* Memberi ruang agar teks teratas tidak tertutup navbar */
+    padding-bottom: 50px !important;
+    text-align: center !important;
+    background-attachment: scroll !important; /* Nonaktifkan efek kaku parallax di HP */
+  }
+
+  /* 4. TENTANG KAMI (ABOUT) - TEKS DAN FOTO UTUH SINKRON */
+  #tentang .container,
+  .about-container,
+  .about-row {
+    display: block !important; /* Hancurkan flex ganda laptop */
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .about-text-side,
+  .about-text-content,
+  .about-content {
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    margin-bottom: 25px !important; /* Beri jarak sebelum foto di bawahnya */
+  }
+
+  .about-image-side,
+  .about-img-wrapper,
+  .about-section img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 280px !important; /* Ukuran foto pengacara yang pas di HP */
+    height: 380px !important; /* Proporsi tinggi foto yang aman */
+    margin: 0 auto !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+  }
+
+  /* 5. TESTIMONI (KARTU LEBAR PENUH) */
+  .testimonial-container,
+  .testimonial-row {
+    display: block !important;
+    height: auto !important;
+  }
+  .testimonial-card {
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    margin-bottom: 15px !important;
+    padding: 20px !important;
+  }
+
+  /* 6. FORM RESERVASI KONSULTASI ONLINE (TERBUKA TOTAL, ANTI-TERPOTONG) */
+  .pinterest-split-container {
+    display: block !important; /* Mengubah model belah samping menjadi bertumpuk */
     height: auto !important;
     min-height: auto !important;
     max-height: none !important;
     overflow: visible !important;
     width: 100% !important;
-    max-width: 440px !important;
-    margin: 10px auto 0 auto !important;
+    max-width: 440px !important; /* Mencegah melar saat rotasi layar atau mode desktop */
+    margin: 15px auto !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
   }
 
-  /* Banner Gambar Buku di Atas Form */
+  /* Sisi Atas: Banner Visual Gambar Buku */
   .pinterest-image-side {
     width: 100% !important;
-    height: 160px !important;
+    height: 160px !important; /* Dikunci konstan sebagai header box */
     min-height: 160px !important;
     max-height: 160px !important;
-    padding: 12px !important;
+    padding: 15px !important;
     display: flex !important;
     align-items: flex-end !important;
     box-sizing: border-box !important;
     background-size: cover !important;
     background-position: center !important;
     border-radius: 8px 8px 0 0 !important;
-    overflow: visible !important;
   }
-  .pinterest-floating-card p {
-    display: none !important; /* Buang teks kecil di gambar agar ringkas */
+  .pinterest-floating-card p,
+  .pinterest-socials {
+    display: none !important; /* Hilangkan pelengkap agar hemat ruang jempol */
   }
 
-  /* Area Form Pengisian (Lepas Semua Gembok Tinggi) */
+  /* Sisi Bawah: Area Putih Tempat Input Form (Buka Kunci Total) */
   .pinterest-form-side {
     width: 100% !important;
-    height: auto !important; /* Mengalir bebas ke bawah sedalam baris inputan */
+    height: auto !important; /* Berubah alami mengikuti kedalaman form */
     min-height: auto !important;
     max-height: none !important;
-    padding: 25px 15px !important;
+    padding: 25px 20px !important;
     box-sizing: border-box !important;
     background: #ffffff !important;
     border-radius: 0 0 8px 8px !important;
@@ -1295,14 +1292,14 @@ body {
     display: block !important;
   }
 
-  /* Hancurkan baris menyamping Tanggal & Jam milik laptop */
+  /* Buat baris pilihan Tanggal & Jam menumpuk atas bawah */
   .pinterest-form-side .form-row {
     display: block !important;
     height: auto !important;
     overflow: visible !important;
   }
 
-  /* Paksa seluruh input, select, textarea, dan button mengalir ke bawah */
+  /* Penyeragaman seluruh elemen input form ke bawah */
   .pinterest-form-side form,
   .pinterest-form-side .form-group,
   .pinterest-form-side input,
@@ -1321,14 +1318,23 @@ body {
   .pinterest-form-side input,
   .pinterest-form-side textarea,
   .pinterest-form-side select {
-    padding: 10px !important;
+    padding: 11px !important;
     margin-bottom: 12px !important;
     font-size: 14px !important;
+    border: 1px solid #cccccc !important;
+    border-radius: 4px !important;
   }
 
   .pinterest-form-side label {
-    margin-bottom: 4px !important;
-    font-size: 13px !important;
     display: block !important;
+    margin-bottom: 4px !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+  }
+
+  .btn-submit-wa {
+    padding: 12px !important;
+    margin-top: 5px !important;
+    font-weight: bold !important;
   }
 }
