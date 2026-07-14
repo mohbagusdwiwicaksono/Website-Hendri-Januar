@@ -1138,7 +1138,7 @@ body {
 }
 
 /* ==========================================================================
-   PERBAIKAN TOTAL LAYAR HP: TRUE FLEX/BLOCK LAYOUT (ANTI-TERPOTONG & NATURAL)
+   PERBAIKAN AKURAT: KOTAK RESERVASI SCROLL & FOOTER KEMBALI KE AWAL
    ========================================================================== */
 @media (max-width: 768px) {
   /* 1. RESET GLOBAL UNTUK HP */
@@ -1151,155 +1151,202 @@ body {
     min-height: 100vh !important;
     overflow-y: visible !important;
     overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch;
   }
 
-  /* Hilangkan kuncian display laptop, buat semua mengalir lurus ke bawah */
+  /* Memastikan semua section utama fleksibel memanjang ke bawah */
   section,
   .hero-section,
   .about-section,
   .services-section,
-  .testimonial-section,
-  #kontAK,
-  .contact-section {
+  .testimonial-section {
     height: auto !important;
     min-height: auto !important;
     max-height: none !important;
     overflow: visible !important;
     display: block !important;
-    padding: 40px 20px !important; /* Jarak aman antar halaman agar padat */
+    padding: 40px 20px !important;
     box-sizing: border-box !important;
   }
 
   .container {
     width: 100% !important;
     max-width: 100% !important;
-    padding: 0 !important;
-    margin: 0 auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  /* 2. MEMUNCULKAN KEMBALI JAM PRAKTIK BERJALAN */
+  /* ==========================================================================
+       MEMBONGKAR PAKSA TOP BAR & JAM PRAKTIK MARQUEE DI HP
+       ========================================================================== */
+  .top-bar {
+    display: block !important; /* Memaksa kontainer utama muncul di HP */
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    background-color: #721c24 !important; /* Sesuaikan dengan warna marun/merah gelap web Anda */
+    padding: 8px 0 !important;
+    position: relative !important;
+    z-index: 10000 !important; /* Memastikan posisinya berada di paling depan */
+  }
+
+  .top-bar .container {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 10px !important;
+  }
+
+  /* Mengatur jalannya teks Marquee agar tidak macet dan pas ukurannya */
+  .top-bar marquee {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+  }
+
+  /* Merapikan teks dan ikon jam di dalam marquee agar kontras */
+  .top-bar span,
+  .top-bar strong,
+  .top-bar i {
+    color: #ffffff !important; /* Paksa warna teks menjadi putih agar terbaca jelas */
+    font-size: 12.5px !important; /* Ukuran disesuaikan agar proporsional di layar HP */
+    display: inline-block !important;
+  }
+
+  /* 3. BERANDA & NAVIGASI */
+  header,
+  .navbar,
+  .nav-container {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  }
+  .nav-menu,
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    padding: 10px 15px !important;
+  }
+  #beranda,
+  .hero-section {
+    height: auto !important;
+    min-height: 100vh !important;
+    padding-top: 140px !important;
+    padding-bottom: 60px !important;
+    text-align: left !important;
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+  .hero-section h1,
+  .hero-section .hero-title,
+  .hero-section p,
+  .hero-section .hero-text,
+  .hero-section a,
+  .hero-section .btn {
+    text-align: left !important;
+    display: inline-block !important;
+  }
+
+  /* 4. TENTANG KAMI, AREA PRAKTIK, & TESTIMONI (Tinggi Fleksibel) */
+  #tentang .container,
+  .about-container,
+  .services-section .services-grid,
+  .services-container,
+  .grid-container,
+  .testimonial-container,
+  .testimonial-grid {
     display: block !important;
     height: auto !important;
     overflow: visible !important;
   }
-
-  /* 2. PERBAIKAN MENU NAVIGASI (Biarkan berbaris rapi di tengah) */
-  .contact-section .section-header p,
-  header nav,
-  .nav-menu,
-  .navbar {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 10px !important;
-    height: auto !important;
-  }
-
-  /* 3. BERANDA (HERO SECTION) */
-  #beranda,
-  .hero-section {
-    padding-top: 100px !important; /* Memberi ruang agar teks teratas tidak tertutup navbar */
-    padding-bottom: 50px !important;
-    text-align: center !important;
-    background-attachment: scroll !important; /* Nonaktifkan efek kaku parallax di HP */
-  }
-
-  /* 4. TENTANG KAMI (ABOUT) - TEKS DAN FOTO UTUH SINKRON */
-  #tentang .container,
-  .about-container,
-  .about-row {
-    display: block !important; /* Hancurkan flex ganda laptop */
-    height: auto !important;
-    overflow: visible !important;
-  }
-
   .about-text-side,
-  .about-text-content,
   .about-content {
     width: 100% !important;
-    height: auto !important;
-    overflow: visible !important;
-    margin-bottom: 25px !important; /* Beri jarak sebelum foto di bawahnya */
+    margin-bottom: 30px !important;
   }
-
   .about-image-side,
   .about-img-wrapper,
   .about-section img {
     display: block !important;
-    width: 100% !important;
-    max-width: 280px !important; /* Ukuran foto pengacara yang pas di HP */
-    height: 380px !important; /* Proporsi tinggi foto yang aman */
+    width: 90% !important;
+    max-width: 320px !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
     margin: 0 auto !important;
     object-fit: cover !important;
     border-radius: 8px !important;
   }
-
-  /* 5. TESTIMONI (KARTU LEBAR PENUH) */
-  .testimonial-container,
-  .testimonial-row {
-    display: block !important;
-    height: auto !important;
-  }
+  .service-card,
+  .services-section .card,
+  .practice-card,
   .testimonial-card {
     width: 100% !important;
     height: auto !important;
     min-height: auto !important;
-    margin-bottom: 15px !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin-bottom: 20px !important;
     padding: 20px !important;
+    box-sizing: border-box !important;
   }
 
-  /* 6. FORM RESERVASI KONSULTASI ONLINE (TERBUKA TOTAL, ANTI-TERPOTONG) */
-  .pinterest-split-container {
-    display: block !important; /* Mengubah model belah samping menjadi bertumpuk */
+  /* 5. FORM RESERVASI ONLINE - MENGAKTIFKAN KEMBALI KOTAK SCROLL MANDIRI */
+  #kontak,
+  .contact-section {
     height: auto !important;
     min-height: auto !important;
     max-height: none !important;
-    overflow: visible !important;
+    padding: 40px 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Mengunci tinggi wadah form agar pas di layar HP dan bisa di-scroll di dalamnya */
+  .pinterest-split-container {
+    display: block !important;
     width: 100% !important;
-    max-width: 440px !important; /* Mencegah melar saat rotasi layar atau mode desktop */
-    margin: 15px auto !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
+
+    /* KUNCI UTAMA: Batasi tinggi & aktifkan scrollbox mandiri agar tidak terpotong */
+    height: 520px !important;
+    overflow-y: auto !important;
+
     border-radius: 8px !important;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
   }
 
-  /* Sisi Atas: Banner Visual Gambar Buku */
   .pinterest-image-side {
     width: 100% !important;
-    height: 160px !important; /* Dikunci konstan sebagai header box */
-    min-height: 160px !important;
-    max-height: 160px !important;
-    padding: 15px !important;
+    height: 150px !important;
     display: flex !important;
     align-items: flex-end !important;
-    box-sizing: border-box !important;
     background-size: cover !important;
     background-position: center !important;
     border-radius: 8px 8px 0 0 !important;
   }
   .pinterest-floating-card p,
   .pinterest-socials {
-    display: none !important; /* Hilangkan pelengkap agar hemat ruang jempol */
+    display: none !important;
   }
-
-  /* Sisi Bawah: Area Putih Tempat Input Form (Buka Kunci Total) */
   .pinterest-form-side {
     width: 100% !important;
-    height: auto !important; /* Berubah alami mengikuti kedalaman form */
-    min-height: auto !important;
-    max-height: none !important;
-    padding: 25px 20px !important;
-    box-sizing: border-box !important;
+    height: auto !important;
+    padding: 20px 15px !important;
     background: #ffffff !important;
-    border-radius: 0 0 8px 8px !important;
-    overflow: visible !important;
-    display: block !important;
+    box-sizing: border-box !important;
   }
-
-  /* Buat baris pilihan Tanggal & Jam menumpuk atas bawah */
   .pinterest-form-side .form-row {
     display: block !important;
-    height: auto !important;
-    overflow: visible !important;
   }
-
-  /* Penyeragaman seluruh elemen input form ke bawah */
   .pinterest-form-side form,
   .pinterest-form-side .form-group,
   .pinterest-form-side input,
@@ -1309,32 +1356,52 @@ body {
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
-    box-sizing: border-box !important;
     display: block !important;
+    box-sizing: border-box !important;
   }
-
   .pinterest-form-side input,
   .pinterest-form-side textarea,
   .pinterest-form-side select {
-    padding: 11px !important;
+    padding: 10px !important;
     margin-bottom: 12px !important;
-    font-size: 14px !important;
-    border: 1px solid #cccccc !important;
-    border-radius: 4px !important;
   }
 
-  .pinterest-form-side label {
+  /* ==========================================================================
+       6. FOOTER KEMBALI SEPERTI AWAL (TIDAK DIGANGGU KODE HP SAMA SEKALI)
+       ========================================================================== */
+  /* Bagian ini sengaja dikosongkan/dihapus aturan HP-nya agar browser otomatis 
+       mengikuti desain asli laptop Anda yang sudah rapi sebelumnya */
+}
+/* TONGKAT PENYELAMAT: Mengatur posisi Top-Bar, Navigasi, dan Hero Section */
+@media (max-width: 768px) {
+  /* Pastikan Top-bar selalu paling atas */
+  .top-bar {
     display: block !important;
-    margin-bottom: 4px !important;
-    font-weight: 600 !important;
-    font-size: 13px !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 10000 !important;
+    background-color: #721c24 !important; /* Sesuaikan warna background Anda */
+    padding: 5px 0 !important;
   }
 
-  .btn-submit-wa {
-    padding: 12px !important;
-    margin-top: 5px !important;
-    font-weight: bold !important;
+  /* Geser Navigasi ke bawah Top-bar */
+  header,
+  .navbar,
+  .nav-container {
+    position: fixed !important;
+    top: 35px !important; /* Navigasi duduk manis di bawah top-bar */
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  /* Beri ruang agar Hero Section tidak tertutup nav */
+  #beranda,
+  .hero-section {
+    padding-top: 150px !important;
   }
 }
