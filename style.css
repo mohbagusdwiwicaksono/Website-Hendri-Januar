@@ -1405,3 +1405,46 @@ body {
     padding-top: 150px !important;
   }
 }
+
+@media (max-width: 768px) {
+  /* Navigasi Ramping: Hanya tingginya saja yang diatur */
+  header,
+  .navbar,
+  .nav-container {
+    position: fixed !important;
+    top: 0 !important; /* Hilangkan gap 35px karena kita akan buat lebih tipis */
+    width: 100% !important;
+    height: 60px !important; /* Kunci tinggi agar tidak memakan setengah layar */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 15px !important;
+    background: #ffffff !important;
+    z-index: 9999 !important;
+  }
+
+  /* Sembunyikan menu teks panjang di HP agar tidak penuh, ganti dengan ikon menu/burger */
+  .nav-menu,
+  .navbar-nav {
+    display: none !important; /* Gunakan menu burger jika ada */
+  }
+
+  /* Pindahkan padding top Beranda karena nav kini lebih ramping */
+  #beranda,
+  .hero-section {
+    padding-top: 80px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-image-side,
+  .about-section img {
+    display: block !important;
+    margin: 0 auto !important; /* Kunci: Margin kiri-kanan auto akan memusatkan objek */
+    float: none !important;
+    width: 80% !important; /* Lebar 80% agar tidak terlalu mepet ke layar */
+    max-width: 300px !important;
+    height: auto !important;
+    text-align: center !important;
+  }
+}
